@@ -1,130 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hospital Patient Registration</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #e9ecef;
-      padding: 40px;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #007bff;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: #007bff;
-      outline: none;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 25px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    .success-message {
-      margin-top: 25px;
-      padding: 15px;
-      border-radius: 5px;
-      background-color: #d4edda;
-      color: #155724;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="form-container">
-    <h2>Patient Registration Form</h2>
-    <form id="patientForm">
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" pattern="[A-Za-z\s]+" title="Only alphabets and spaces are allowed" required>
-
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender" required>
-        <option value="">-- Select Gender --</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min="0" max="120" required>
-
-      <label for="phone">Contact Number:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit number" required>
-
-      <label for="date">Appointment Date:</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="symptoms">Symptoms:</label>
-      <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <div id="result" class="success-message" style="display:none;"></div>
-  </div>
-
-  <script>
-    document.getElementById('patientForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent form refresh
-
-      // Generate random 8-digit Patient ID
-      const patientId = 'PAT' + Math.floor(10000000 + Math.random() * 90000000);
-
-      // Show result
-      document.getElementById('result').style.display = 'block';
-      document.getElementById('result').innerText = Registration successful! Your Patient ID is: ${patientId};
-
-      // Reset form after submission
-      document.getElementById('patientForm').reset();
-    });
-  </script>
-
-</body>
+<html>
+    <head>
+        <title>Hospital management system</title>
+        <style>
+            label{
+                font-size: 30;
+            }
+        </style>
+        <hr>
+    </head>
+    <body style="background-image: url(https://thumbs.dreamstime.com/b/sunrise-over-beach-cancun-beautiful-mexico-40065727.jpg); background-size: cover; background-repeat: no-repeat;">
+        <h1 style="color: rgb(49, 66, 243); text-align: center; ">Enter The details here</h1>
+        <hr>
+        <labe style="animation: forwards;">First name</label>
+        <input type="text"><br><p></p>
+        <label>Last name</label>
+        <input type="text"><br><p></p>
+        <label for="address">Enter your adress</label>
+        <textarea id="address" name="address" rows="2" cols="40"></textarea><br><p></p>
+        <label for="gender">Male</label>
+        <input type="radio" name="gender">
+        <label for="gender">Female</label>
+        <input type="radio" name="gender"><br><p></p>
+        <label>Enter your email</label>
+        <input type="email"><br><p></p>
+        <label for="">Enter your phone no</label>
+        <input type="number"><br><p></p>
+        <label for="Blood">Blood group:</label>
+        <select id="Blood" name="Blood">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C-">C-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select><br><p></p>
+        <label for="DOB">Enter your date of birth</label>
+        <input type="date" name="DOB" id="DOB"><br><p></p>
+        <label for="appointment">Enter the date and time for the appointment</label>
+        <input type="date">
+        <input type="time"><br><p></p>
+        <input type="button" value="Submit" style="align-self: center;">
+    </body>
 </html>
