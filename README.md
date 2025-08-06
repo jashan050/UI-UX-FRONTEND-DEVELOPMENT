@@ -24,4 +24,4 @@ The repository is organized like this:
 
 - Clone the repository:
   ```bash
-  git clone https://github.com/Offx-suryansh/UI-UX-FRONTEND-COLLECTION.git
+(https://github.com/jashan050/UI-UX-FRONTEND-DEVELOPMENT)
